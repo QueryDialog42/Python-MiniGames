@@ -1,6 +1,6 @@
-####################
-# Wheather API App #
-####################
+######################
+#  Wheather API App  #
+######################
 
 from sys import argv
 import requests
