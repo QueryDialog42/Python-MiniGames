@@ -7,6 +7,10 @@ def createtable(*args: list | str, space: int, title: bool = False, format: int 
                  leftbodyborder:str = "|", rightbodyborder:str = "|", lefttitleborder:str = "|", righttitleborder:str = "|",
                    topborder:str = "=", middleborder:str = "=", underborder:str = "=", head:str = None, leftheadborder:str = "|", rightheadborder:str = "|",
                    leftfootborder:str = "|", rightfootborder:str = "|") -> None:
+    """
+    Creates a table in terminal that based on the row lists you give.
+    The example of usage is shown in ExampleFor_createtable.py
+    """
     class TableNeeds:
         @staticmethod
         def findlongestlist() -> int:
@@ -412,6 +416,7 @@ def createtable(*args: list | str, space: int, title: bool = False, format: int 
 
 def onlystr(*args: str | list, remove_spaces:bool = False) -> str | list[str]:
     """
+    This function takes strings or lists as parameter and deletes every non-string element from it.
     Please use this function with 'next()' method.
     """
     for inputs in args:
@@ -423,6 +428,7 @@ def onlystr(*args: str | list, remove_spaces:bool = False) -> str | list[str]:
 
 def onlyint(*args: str | list, remove_spaces:bool = False) -> int | list[int]:
     """
+    This function takes strings or lists as parameter and deletes every non-integer element from it.
     Please use this function with 'next()' method.
     """
     for inputs in args:
@@ -433,6 +439,9 @@ def onlyint(*args: str | list, remove_spaces:bool = False) -> int | list[int]:
             yield intlist
 
 def strdenied(inputmassage: str, deniedmassage: str) -> int:
+    """
+    This function continues to ask for an input that only contains integer elements
+    """
     print(inputmassage, end="", flush=True)
     for inputs in stdin:
         try:
@@ -444,6 +453,9 @@ def strdenied(inputmassage: str, deniedmassage: str) -> int:
     return int(inputs)
 
 def intdenied(inputmassage: str, deniedmassage: str) -> str:
+    """
+    This function continues to ask for an input that only contains string elements
+    """
     print(inputmassage, end="", flush=True)
     for inputs in stdin:
         try:
